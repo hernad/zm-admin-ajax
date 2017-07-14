@@ -1,4 +1,4 @@
-<project name="zm-ajax" default="jar">
+<project name="zm-admin-ajax" default="jar">
     <import file="../zm-zcs/ant-global.xml"/>
 
     <target name='init' >
@@ -36,10 +36,9 @@
         <pathelement location="${src.dir}" />
     </path>
 
-    <!-- Jar target to produce jar output, depends on compile target of zm-ajax build.xml. -->
     <target name="jar" depends="compile" description="Creates the jar file">
       <antcall target="zimbra-jar">
-        <param name="implementation.title" value="Zimbra Ajax"/>
+        <param name="implementation.title" value="Zimbra Admin Ajax"/>
       </antcall>
     </target>
 </project>
