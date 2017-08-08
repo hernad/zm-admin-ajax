@@ -1,6 +1,9 @@
 ## Steps to build
- - ant zm-ajax
- 
+ - ant jar
+
+## Steps to publish to ivy
+ - ant publish-local
+
 ## Dependencies
 - `zm-taglib`
 - `zm-store`
@@ -9,8 +12,7 @@
 - `ThirdParty Jars`
 
 ## Artifacts
-- `zmajax.jar`
-- `Class files for /src`
+- `zm-admin-ajax.jar`
 
 ## Build Pre-requisite
 - create .zcs-deps folder in home directory
