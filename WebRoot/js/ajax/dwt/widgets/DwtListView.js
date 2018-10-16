@@ -339,12 +339,7 @@ function(htmlArr, idx, headerCol, i, numCols, id, defaultColumnSort) {
 	htmlArr[idx++] = "<div";
 	var headerColWidth = null;
 	if (headerCol._width && headerCol._width != "auto") {
-		//why we need to + 2 here ? It causes the misalign of the list items in IE
-		if (AjxEnv.isIE) {
-			headerColWidth = headerCol._width;
-		} else {
-			headerColWidth = headerCol._width + 2;
-		}
+		headerColWidth = headerCol._width;
 		if (headerCol._widthUnits) {
 			headerColWidth += headerCol._widthUnits;
 		}
