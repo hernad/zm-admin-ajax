@@ -1744,12 +1744,12 @@ function(html) {
 	if (!AjxStringUtil.__curIframeId) {
 		iframe = document.createElement("IFRAME");
 		AjxStringUtil.__curIframeId = iframe.id = Dwt.getNextId();
-		
+
+		iframe.setAttribute('aria-hidden', true);
+		document.body.appendChild(iframe);
 		// position offscreen rather than set display:none so we can get metrics if needed; no perf difference seen
 		Dwt.setPosition(iframe, Dwt.ABSOLUTE_STYLE);
 		Dwt.setLocation(iframe, Dwt.LOC_NOWHERE, Dwt.LOC_NOWHERE);
-		iframe.setAttribute('aria-hidden', true);
-		document.body.appendChild(iframe);
 	} else {
 		iframe = document.getElementById(AjxStringUtil.__curIframeId);
 	}
